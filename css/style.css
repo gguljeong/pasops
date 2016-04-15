@@ -1,0 +1,87 @@
+@charset "utf-8";
+body{position: relative; max-width: 1100px; margin: 0 auto;}
+
+.clearfix:after{ display: block; clear:both;}
+
+.menu-wrap {
+    width:100%;
+}
+
+.menu {
+    margin:0px auto;
+}
+
+.menu li {
+    margin:0px;
+    list-style:none;
+}
+
+.menu a {
+    transition:all linear 0.15s;
+    color:#777777;
+    text-decoration:none;
+}
+
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+}
+
+/*----- Top Level -----*/
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+}
+
+.menu > ul > li > a {
+    padding:10px 20px;
+    display:inline-block;
+}
+
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    color: #333333;
+}
+
+.menu ul .logo{
+    font-weight: bold;
+    font-size: 25px;
+    top: -7px;
+}
+
+.menu ul .login{
+    font-size: 13px;
+    float: right;
+    top: 5px;
+}
+
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+
+.sub-menu {
+    width:100%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    background:#FFF;
+}
+
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+
+.sub-menu li a:hover, .sub-menu .current-item a {
+    color: #333333;
+}
